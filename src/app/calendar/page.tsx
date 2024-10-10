@@ -6,14 +6,12 @@ import {
   eachDayOfInterval,
   endOfMonth,
   format,
-  getDay,
   isSameDay,
   isSameMonth,
   startOfMonth,
   subMonths,
 } from "date-fns";
 import {
-  CalendarCheck,
   ChevronLeft,
   ChevronRight,
   DollarSign,
@@ -56,8 +54,8 @@ export default function TipTrackerCalendar() {
 
   const monthStart = startOfMonth(currentMonth);
   const monthEnd = endOfMonth(monthStart);
-  const startDate = addDays(monthStart, -getDay(monthStart));
-  const endDate = addDays(monthEnd, 6 - getDay(monthEnd));
+  const startDate = addDays(monthStart, -1);
+  const endDate = addDays(monthEnd, 7);
 
   const dateRange = eachDayOfInterval({
     start: startDate,
@@ -113,25 +111,13 @@ export default function TipTrackerCalendar() {
             <ChevronLeft className="h-4 w-4" />
           </Button>
           <CardTitle>{format(currentMonth, "MMMM yyyy")}</CardTitle>
-          <div className="flex items-center gap-3">
-            <Button
-              variant={"outline"}
-              size="icon"
-              onClick={() => {
-                setSelectedDate(new Date());
-                setCurrentMonth(new Date());
-              }}
-            >
-              <CalendarCheck className="h-4 w-4" />
-            </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => setCurrentMonth(addMonths(currentMonth, 1))}
-            >
-              <ChevronRight className="h-4 w-4" />
-            </Button>
-          </div>
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={() => setCurrentMonth(addMonths(currentMonth, 1))}
+          >
+            <ChevronRight className="h-4 w-4" />
+          </Button>
         </div>
       </CardHeader>
       <CardContent>
