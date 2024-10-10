@@ -226,6 +226,7 @@ export default function TipTrackerCalendar() {
               </div>
               <Button onClick={addOrUpdateTip}>
                 {editingTip ? "Update" : "Add"}
+                hi
               </Button>
             </div>
           </DialogContent>
