@@ -84,12 +84,6 @@ export default async function Home() {
                 </a>
               </div>
             </div>
-            {/* <Image
-              src="https://placehold.co/800x500?text=Hero+Section&font=roboto"
-              alt="Hero"
-              width={600}
-              height={400}
-            /> */}
           </div>
         </main>
       </div>
