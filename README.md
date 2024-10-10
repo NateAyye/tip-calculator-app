@@ -10,7 +10,6 @@
 - [tRPC](https://trpc.io)
 - [uploadThing](https://uploadthing.com)
 - [datefns](https://date-fns.org)
-- [googleauth](https://console.cloud.google.com/apis/credentials)
 
 ## What's next? How do I make an app with this?
 
